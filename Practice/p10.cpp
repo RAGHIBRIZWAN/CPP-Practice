@@ -4,85 +4,114 @@
 
 using namespace std;
 
-void easy(int r,int n){
+void easy(int r, int n)
+{
     r %= 50;
-    cout << "   The generaed number is between 1 and 50 \n";
-    if(n<r){
-       cout << "Number is low";
+    cout << "   The generaed number is between 0 and 49 \n";
+    if (n < r)
+    {
+        cout << "User generated number: " << n << endl;
+        cout << "Computer generated number: " << r << endl;
+        cout << "Number is low" << endl;
     }
-    else if(n==r){
-        cout<<"Number is matched";
+    else if (n == r)
+    {
+        cout << "User generated number: " << n << endl;
+        cout << "Computer generated number: " << r << endl;
+        cout << "Number is matched" << endl;
     }
-    else if(n>r){
-        cout<<"Number is high";
+    else if (n > r)
+    {
+        cout << "User generated number: " << n << endl;
+        cout << "Computer generated number: " << r << endl;
+        cout << "Number is high" << endl;
     }
 }
 
-void medium(int r, int n){
+void medium(int r, int n)
+{
     r %= 100;
-    cout << "   The generaed number is between 1 and 50 \n";
-    if(n<r){
-       cout << "Number is low";
+    cout << "   The generaed number is between 0 and 99 \n";
+    if (n < r)
+    {
+        cout << "User generated number: " << n << endl;
+        cout << "Computer generated number: " << r << endl;
+        cout << "Number is low" << endl;
     }
-    else if(n==r){
-        cout<<"Number is matched";
+    else if (n == r)
+    {
+        cout << "User generated number: " << n << endl;
+        cout << "Computer generated number: " << r << endl;
+        cout << "Number is matched" << endl;
     }
-    else if(n>r){
-        cout<<"Number is high";
+    else if (n > r)
+    {
+        cout << "User generated number: " << n << endl;
+        cout << "Computer generated number: " << r << endl;
+        cout << "Number is high" << endl;
     }
 }
 
-void hard(int r, int n){
-    r %= 100+100;
-    
-    if(n<r){
-       cout << "Number is low";
+void hard(int r, int n)
+{
+    r %= 200;
+    cout << "   The generaed number is between 0 and 199 \n";
+    if (n < r)
+    {
+        cout << "User generated number: " << n << endl;
+        cout << "Computer generated number: " << r << endl;
+        cout << "Number is low" << endl;
     }
-    else if(n==r){
-        cout<<"Number is matched";
+    else if (n == r)
+    {
+        cout << "User generated number: " << n << endl;
+        cout << "Computer generated number: " << r << endl;
+        cout << "Number is matched" << endl;
     }
-    else if(n>r){
-        cout<<"Number is high";
+    else if (n > r)
+    {
+        cout << "User generated number: " << n << endl;
+        cout << "Computer generated number: " << r << endl;
+        cout << "Number is high" << endl;
     }
 }
 
 int main()
 {
-    char again;
     srand(time(0));
     cout << "   \n -------------------------------------------------------";
     cout << "   Welcome to Guessing number game \n";
-    while(1)
+    while (1)
     {
-    cout << "   Please select the difficulty level\n";
-    cout << "   1: Easy \n";
-    cout << "   2: Medium \n";
-    cout << "   3: Hard \n";
-    cout << "   4: Exit\n";
+        cout << "   Please select the difficulty level\n";
+        cout << "   1: Easy \n";
+        cout << "   2: Medium \n";
+        cout << "   3: Hard \n";
+        cout << "   4: Exit\n";
 
-    int level;
-    cin >> level;
-    int r,n;
-    r = rand();
-    cout<<"Enter the number: ";
-    cin>>n;
-    
-            switch(level){
-                case 1:
-                cout << "   The generaed number is between 1 and 50 \n";
-                easy(r,n);
-                break;
-                case 2:
-                medium(r,n);
-                cout << "   The generaed number is between 51 and 100 \n";
-                break;
-                case 3:
-                hard(r,n);
-                cout << "   The generaed number between 101 and 200 \n";
-                break;
-                case 4:
-                return 0;
-            }
-
-       }
+        int level;
+        cin >> level;
+        int r, n;
+        r = rand();
+        switch (level)
+        {
+        case 1:
+            cout << "Enter the number: ";
+            cin >> n;
+            easy(r, n);
+            break;
+        case 2:
+            cout << "Enter the number: ";
+            cin >> n;
+            medium(r, n);
+            break;
+        case 3:
+            cout << "Enter the number: ";
+            cin >> n;
+            hard(r, n);
+            break;
+        case 4:
+            return 0;
+        }
+    }
 }
