@@ -1,3 +1,4 @@
+int num = 121;
 string a = to_string(num);
     int b = a.size();
     int i = 0;
