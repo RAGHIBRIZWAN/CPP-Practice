@@ -3,6 +3,8 @@
 #include<algorithm>
 using namespace std;
 
+// Short Trick: If n % 4 == 0, You will always lose. Else you can win.
+
 int main(){
     int n;
     int player = 0;
