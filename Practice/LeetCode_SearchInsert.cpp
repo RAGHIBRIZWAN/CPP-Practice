@@ -29,6 +29,4 @@ int main(){
     }
     cout<<endl;
     cout<<"Position: "<<num;
-    
-    
 }
