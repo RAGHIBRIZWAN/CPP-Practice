@@ -11,7 +11,7 @@ int main() {
         for (int j = 0; j < nums2.size(); j++) {
             if (nums1[i] == nums2[j]) {
                 output.push_back(nums1[i]);
-                nums2.erase(nums2.begin() + j); // Remove the matched element
+                nums2.erase(nums2.begin() + j);
                 break;
             }
         }
